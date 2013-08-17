@@ -1,7 +1,7 @@
 # cljminecraft-deploy
 
-A Leiningen plugin that adds a hook to `lein jar` to deploy the cljminecraft
-plugin to the Bukkit `plugins` directory.
+A Leiningen plugin that adds a hook to `lein deploy` to deploy the cljminecraft
+plugin to the local Bukkit `plugins` directory.
 
 ## Usage
 
