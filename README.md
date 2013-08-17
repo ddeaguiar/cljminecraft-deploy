@@ -6,8 +6,9 @@ plugin to the Bukkit `plugins` directory.
 ## Usage
 
 Put `[cljminecraft-deploy "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your
-`:user` profile, or if you are on Leiningen 1.x do `lein plugin install
-cljminecraft-deploy 0.1.0-SNAPSHOT`.
+`:dev` profile.
+
+Add `:bukkit-plugins-dir "path/to/bukkit/plugins/dir"` to your `:dev` profile.
 
 Add `:hooks [leiningen.cljminecraft-deploy]` to your cljminecraft plugin
 project.clj.
