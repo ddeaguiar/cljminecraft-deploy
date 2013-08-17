@@ -1,7 +1,7 @@
 # cljminecraft-deploy
 
 A Leiningen plugin that adds a hook to `lein deploy` to deploy the cljminecraft
-plugin to the local Bukkit `plugins` directory.
+plugin jar to the local Bukkit `plugins` directory.
 
 ## Usage
 
@@ -12,6 +12,9 @@ Add `:bukkit-plugins-dir "path/to/bukkit/plugins/dir"` to your `:dev` profile.
 
 Add `:hooks [leiningen.cljminecraft-deploy]` to your cljminecraft plugin
 project.clj.
+
+To deploy a plugin use `lein deploy`. If you need to deploy an uberjar, use
+`lein deploy :uberjar`.
 
 ## License
 
