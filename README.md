@@ -5,13 +5,12 @@ plugin jar to the local Bukkit `plugins` directory.
 
 ## Usage
 
-Put `[cljminecraft-deploy "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your
-`:dev` profile.
+`export BUKKIT_PLUGINS_DIR="/path/to/bukkit/plugins`
 
-Add `:bukkit-plugins-dir "path/to/bukkit/plugins/dir"` to your `:dev` profile.
+Add the following to your cljminecraft plugin project.clj:
 
-Add `:hooks [leiningen.cljminecraft-deploy]` to your cljminecraft plugin
-project.clj.
+    :plugins [[cljminecraft-deploy "0.1.0-SNAPSHOT"]]
+    :hooks [leiningen.cljminecraft-deploy]
 
 To deploy a plugin use `lein deploy`. If you need to deploy an uberjar, use
 `lein deploy :uberjar`.

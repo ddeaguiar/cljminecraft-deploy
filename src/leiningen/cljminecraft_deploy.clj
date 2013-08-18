@@ -10,8 +10,8 @@
 
 (defn- copy-file! [source dest]
   (do
-    (io/copy (io/file source) (io/file dest))
-    (main/info (str/join " " ["Copied" source "to" dest]))))
+    (main/info (str/join " " ["Copying" source "to" dest]))
+    (io/copy (io/file source) (io/file dest))))
 
 (defn copy-plugin-to-bukkit-hook [f & args]
   (let [params (set (map read-string (rest args)))
@@ -19,7 +19,7 @@
         source-file-path (if uberjar? (apply uberjar/uberjar args)
                              (apply jar/jar args))
         file-name (last (str/split source-file-path #"/"))
-        plugins-dir (apply :bukkit-plugins-dir args)
+        plugins-dir (System/getenv "BUKKIT_PLUGINS_DIR")
         target-file-path (str/join [plugins-dir "/" file-name])]
     (copy-file! source-file-path target-file-path)
     source-file-path))
