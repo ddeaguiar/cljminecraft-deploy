@@ -1,4 +1,4 @@
-(defproject cljminecraft-deploy "0.1.0-SNAPSHOT"
+(defproject cljminecraft-deploy "0.1.0"
   :description "cljminecraft plugin deployment lein plugin."
   :url "http://github.com/ddeaguiar/cljminecraft-deploy"
   :license {:name "Eclipse Public License"
